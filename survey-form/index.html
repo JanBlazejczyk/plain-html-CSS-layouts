@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Alien Form</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div class="form-window-container-div">
+        <div class="title-div">
+            <h1 id="title">Aliens Faith Form</h1>
+        </div>
+        <div class="description-div">
+            <p id="description">This form measures the level of believing in Aliens among fellow humans</p>
+        </div>
+        <div class="form-div">
+            <form id="survey-form">
+                <!--Name-->
+                <div class="name-div">
+                    <label for="name">First name:</label><br>
+                    <input id="name" type="text" placeholder="John" required><br>
+                </div>
+                <!--Email-->
+                <div class="email-div">
+                    <label for="email">Email:</label><br>
+                    <input id="email" type="email" placeholder="John@gmail.com" required><br>
+                </div>
+                <!--Age-->
+                <div class="age-div">
+                    <label for="number">Age:</label><br>
+                    <input id="number" min="10" max="120" type="number" placeholder="22"><br>
+                </div>
+                <!--Dropdown-->
+                <div class="dropdown-div">
+                    <label for="dropdown">Do you beleive in Aliens?</label><br>
+                    <select id="dropdown" name="aliens">
+                        <option value="sure">I am 100% sure of their existence</option>
+                        <option value="maybe">Maybe they exist</option>
+                        <option value="idk">I don't know</option>
+                        <option value="no">No</option>
+                    </select><br>
+                </div>
+                <!--Gender-->
+                <div class="gender-div">
+                    <label for="gender">Gender:</label><br>
+                    <div class="genderChoice1-div">
+                        <input type="radio" id="genderChoice1" name="gender" value="male">
+                        <label for="genderChoice1">Male</label>
+                    </div>
+                    <div class="genderChoice2-div">
+                        <input type="radio" id="genderChoice2" name="gender" value="female">
+                        <label for="genderChoice2">Female</label>
+                    </div>
+                    <div class="genderChoice3-div">
+                        <input type="radio" id="genderChoice3" name="gender" value="other">
+                        <label for="genderChoice3">Other</label>
+                    </div>
+                </div>
+                <!--Checkboxes-->
+                <div class="evidence-div">
+                    <label for="evidence-label">What kind of evidence do you have:</label><br>
+                    <div class="evidenceChoice1-div">
+                        <input id="evidenceChoice1" type="checkbox" value="I've-seen-Ship">
+                        <label for="evidenceChoice1">I've seen Ship</label>
+                    </div>
+                    <div class="evidenceChoice2-div">
+                        <input id="evidenceChoice2" type="checkbox" value="I've-been-taken">
+                        <label for="evidenceChoice2">I've been taken</label>
+                    </div>
+                    <div class="evidenceChoice3-div">
+                        <input id="evidenceChoice3" type="checkbox" value="I'm one of them">
+                        <label for="evidenceChoice3">I'm one of them</label>
+                    </div>
+                </div>
+                <!--textarea -->
+                <div class="comments-div">
+                    <label for="comments">Additional comments:</label><br>
+                    <textarea id="comments" name="comments"></textarea><br>
+                </div>
+                <!--Sumbit-->
+                <div class="submit-button-div">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

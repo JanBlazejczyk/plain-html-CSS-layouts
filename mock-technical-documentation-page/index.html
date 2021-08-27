@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Technical Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+
+        <!--I can see a nav element with a corresponding id="navbar".-->
+        <nav id="navbar">
+            <img src="logo.png">
+            <header>Start with React</header>
+            <hr>
+            <p><a class="nav-link" href="#Getting_Started">Getting Started</a></p>
+            <hr>
+            <p><a class="nav-link" href="#Add_React_to_a_Website">Add React to a Website</a></p>
+            <hr>
+            <p><a class="nav-link" href="#Create_a_New_React_App">Create a New React App</a></p>
+            <hr>
+            <p><a class="nav-link" href="#CDN_Links">CDN Links</a></p>
+            <hr>
+            <p><a class="nav-link" href="#Release_Channels">Release Channels</a></p>
+            <hr>
+            
+        </nav>
+
+
+        <!--I can see a main element with a corresponding id="main-doc", 
+        which contains the page's main content (technical documentation).-->
+        <main id="main-doc">
+            <!--Within the #main-doc element, I can see several section elements, 
+            each with a class of main-section. There should be a minimum of 5.-->
+            <section class="main-section" id="Getting_Started">
+                <header class="topic">Getting Started</header>
+                <p>React is a JavaScript library for building user interfaces.</p>
+            </section><br>
+
+            <section class="main-section" id="Add_React_to_a_Website">
+                <header class="topic">Add React to a Website</header>
+                <h3>Step 1: Add a DOM Container to the HTML </h3>
+                <p>React has been designed from the start for gradual adoption, 
+                and you can use as little or as much React as you need. 
+                Perhaps you only want to add some “sprinkles of interactivity” to an existing page. 
+                React components are a great way to do that.</p>
+                <p>First, open the HTML page you want to edit. Add an empty div tag to mark the 
+                spot where you want to display something with React. For example:</p>
+                <code>
+                    <!-- ... existing HTML ... -->
+                    <div id="like_button_container"></div>
+                    <!-- ... existing HTML ... -->
+                </code>
+                <p>We gave this div a unique id HTML attribute. This will allow us to find it 
+                from the JavaScript code later and display a React component inside of it.</p>
+                <h3>Step 2: Add the Script Tags </h3>
+                <p>Next, add three script tags to the HTML page right before the closing body tag:</p>
+                <code>
+                    <!-- ... other HTML ... -->
+
+                    <!-- Load React. -->
+                    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+                    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+                    <!-- Load our React component. -->
+                    <script src="like_button.js"></script>
+                    </body>
+                </code>
+                <p>The first two tags load React. The third one will load your component code.</p>
+                <h3>Step 3: Create a React Component </h3>
+                <p>Create a file called like_button.js next to your HTML page.</p>
+                <p>Open <a href="https://gist.githubusercontent.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js">this starter code</a> and paste it into the file you created.</p>
+                <p>After the starter code, add two lines to the bottom of like_button.js:</p>
+                <code>
+                    // ... the starter code you pasted ...
+
+                    const domContainer = document.querySelector('#like_button_container');
+                    ReactDOM.render(e(LikeButton), domContainer);
+                </code>
+                <p>These two lines of code find the div we added to our HTML in the first step, and then display our 
+                “Like” button React component inside of it.</p>
+            </section><br>
+
+            <section class="main-section" id="Create_a_New_React_App">
+                <header class="topic">Create a New React App</header>
+                <h3>Recommended Toolchains</h3>
+                <ul>
+                    <li>If you’re learning React or creating a new single-page app, use Create React App.</li>
+                    <li>If you’re building a server-rendered website with Node.js, try Next.js.</li>
+                    <li>If you’re building a static content-oriented website, try Gatsby.</li>
+                    <li>If you’re building a component library or integrating with an existing codebase, try More Flexible Toolchains.</li>
+                    <li>Or you can create your own toolachain form scratch</li>
+                </ul>
+                <h3>Create React App</h3>
+                <p>Create React App is a comfortable environment for learning React, and is the best way to 
+                start building a new single-page application in React.</p>
+                <p>It sets up your development environment so that you can use the latest JavaScript features, 
+                provides a nice developer experience, and optimizes your app for production. 
+                You’ll need to have Node >= 10.16 and npm >= 5.6 on your machine. To create a project, run:</p>
+                <code>
+                    npx create-react-app my-app
+                    cd my-app
+                    npm start 
+                </code>
+                <h3>Next.js</h3>
+                <p>Next.js is a popular and lightweight framework for static and server‑rendered applications 
+                built with React. It includes styling and routing solutions out of the box, and assumes that 
+                you’re using Node.js as the server environment.</p>
+                <h3>Gatsby</h3>
+                <p>Gatsby is the best way to create static websites with React. It lets you use React components, 
+                but outputs pre-rendered HTML and CSS to guarantee the fastest load time.</p>
+                <h3>Creating a Toolchain from Scratch</h3>
+                <p>A JavaScript build toolchain typically consists of:</p>
+                <ul>
+                    <li>A package manager, such as Yarn or npm. It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.</li>
+                    <li>A bundler, such as webpack or Parcel. It lets you write modular code and bundle it together into small packages to optimize load time.</li>
+                    <li>A compiler such as Babel. It lets you write modern JavaScript code that still works in older browsers.</li>
+                </ul>
+            </section><br>
+
+            <section class="main-section" id="CDN_Links">
+                <header class="topic">CDN Links</header>
+                <h3>Both React and ReactDOM are available over a CDN.</h3>
+                <code>
+                    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+                    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+                </code>
+                <p>To load a specific version of react and react-dom, replace 17 with the version number.</p>
+            </section><br>
+
+            <section class="main-section" id="Release_Channels">
+                <header class="topic">Release Channels</header>
+                <p>Each of React’s release channels is designed for a distinct use case:</p>
+                <ul>
+                    <li>Latest is for stable, semver React releases. It’s what you get when you install React from npm. This is the channel you’re already using today. Use this for all user-facing React applications.</li>
+                    <li>Next tracks the main branch of the React source code repository. Think of these as release candidates for the next minor semver release. Use this for integration testing between React and third party projects.</li>
+                    <li>Experimental includes experimental APIs and features that aren’t available in the stable releases. These also track the main branch, but with additional feature flags turned on. Use this to try out upcoming features before they are released.</li>
+                </ul>
+            </section><br>
+        </main>
+
+    </body>
+</html>

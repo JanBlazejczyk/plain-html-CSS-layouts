@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbar > p {
+    text-align: center;
+}
+
+#navbar > header {
+    text-align: center;
+}
+
+#main-doc {
+    margin: 2rem 0.5rem 0 0.5rem;
+}
+
+/* On regular sized devices (laptops, desktops), the element with id="navbar" 
+should be shown on the left side of the screen and should always be visible to the user. */
+@media (orientation: landscape) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-column-gap: 2rem;
+    }
+    
+    #navbar {
+        /* margin-top: 5vh; */
+        grid-column: 1 / 2;
+        position: sticky;
+        top: 25vh;
+        height: 50vh;
+    }
+
+    #main-doc {
+        grid-column: 2 / 3;
+        margin-top: 2rem;
+    }
+}
